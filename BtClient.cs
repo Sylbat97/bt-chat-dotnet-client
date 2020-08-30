@@ -4,9 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
-using System.Threading.Tasks;
-using SocketIOClient;
-
 
 namespace bt_chat_client
 {
@@ -49,7 +46,7 @@ namespace bt_chat_client
                 var messages = response.GetValue<List<Message>>();
                 messages.ForEach(message =>
                 {
-                    Console.WriteLine(String.Format("[{0}] {1}", message.Author, message.Content));
+                    Console.WriteLine(message);
                 });
             });
 
@@ -57,8 +54,6 @@ namespace bt_chat_client
 
             WaitForInput();
         }
-
-
 
         private void WaitForInput()
         {
@@ -73,7 +68,6 @@ namespace bt_chat_client
         private async void SendMessage(string message)
         {
             await socket.EmitAsync("message", message);
-            Console.WriteLine(String.Format("[{0}] {1}", this.Name, message));
         }
 
         private string GetMessage()
