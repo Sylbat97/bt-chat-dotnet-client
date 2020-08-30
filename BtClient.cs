@@ -38,7 +38,7 @@ namespace bt_chat_client
             socket.On("message", response =>
             {
                 var message = response.GetValue<Message>();
-                Console.WriteLine(String.Format("[{0}] {1}", message.Author, message.Content));
+                Console.WriteLine(message);
             });
 
             socket.On("history", response =>
