@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\sylba\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sylba\\.nuget\\packages"
+    ]
+  }
+}

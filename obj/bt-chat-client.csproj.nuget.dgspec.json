@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\sylvain\\projects\\bt-chat\\bt-chat-client\\bt-chat-client.csproj": {}
+  },
+  "projects": {
+    "D:\\sylvain\\projects\\bt-chat\\bt-chat-client\\bt-chat-client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\sylvain\\projects\\bt-chat\\bt-chat-client\\bt-chat-client.csproj",
+        "projectName": "bt-chat-client",
+        "projectPath": "D:\\sylvain\\projects\\bt-chat\\bt-chat-client\\bt-chat-client.csproj",
+        "packagesPath": "C:\\Users\\sylba\\.nuget\\packages\\",
+        "outputPath": "D:\\sylvain\\projects\\bt-chat\\bt-chat-client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\sylba\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "SocketIOClient": {
+              "target": "Package",
+              "version": "[2.0.2.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

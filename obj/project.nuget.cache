@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "1DhTcZRxREqbHZMYp09g6cIL2XXP66J/Zi83izFRUZHOd80nxnkJVFqNy+sUGVT7wMOdbHldUAVaEKjjbNqZ7Q==",
+  "success": true,
+  "projectFilePath": "D:\\sylvain\\projects\\bt-chat\\bt-chat-client\\bt-chat-client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sylba\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\sylba\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\sylba\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\sylba\\.nuget\\packages\\socketioclient\\2.0.2.4\\socketioclient.2.0.2.4.nupkg.sha512",
+    "C:\\Users\\sylba\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\sylba\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

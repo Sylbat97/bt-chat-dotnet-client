@@ -1,0 +1,16 @@
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.csprojAssemblyReference.cache
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.AssemblyInfoInputs.cache
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.AssemblyInfo.cs
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.csproj.CoreCompileInputs.cache
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\bt-chat-client.exe
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\bt-chat-client.deps.json
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\bt-chat-client.runtimeconfig.json
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\bt-chat-client.runtimeconfig.dev.json
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\bt-chat-client.dll
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\bt-chat-client.pdb
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\sylvain\projects\bt-chat\bt-chat-client\bin\Debug\netcoreapp3.1\SocketIOClient.dll
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.csproj.CopyComplete
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.dll
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.pdb
+D:\sylvain\projects\bt-chat\bt-chat-client\obj\Debug\netcoreapp3.1\bt-chat-client.genruntimeconfig.cache
