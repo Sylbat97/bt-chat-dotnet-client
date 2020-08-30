@@ -9,8 +9,13 @@ namespace bt_chat_client
 {
     class BtClient
     {
+        private const char COMMAND_PREFIX = '!';
+
         public string Name { get; set; }
         private SocketIO socket;
+
+        private bool running = true;
+
         public BtClient(string name)
         {
             this.Name = name;
@@ -21,6 +26,7 @@ namespace bt_chat_client
             Console.WriteLine(Environment.OSVersion);
             Console.OutputEncoding = Encoding.UTF8;
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            Trace.Listeners.Add(new TextWriterTraceListener(Console.Error));
 
             var uri = new Uri("https://vps.sylbat.be:8000");
 
@@ -50,6 +56,16 @@ namespace bt_chat_client
                 });
             });
 
+            socket.On("users", response =>
+            {
+                response.GetValue<List<string>>().ForEach(Console.WriteLine);
+            });
+
+            socket.On("errors", response =>
+            {
+                Console.Error.WriteLine(response.GetValue<string>());
+            });
+
             await socket.ConnectAsync();
 
             WaitForInput();
@@ -57,17 +73,44 @@ namespace bt_chat_client
 
         private void WaitForInput()
         {
-            string input = GetMessage();
-            while (input != "exit")
+            while (running)
             {
-                SendMessage(input);
-                input = GetMessage();
+                string input = GetMessage();
+                if (input.StartsWith(COMMAND_PREFIX) && input.Length > 1)
+                {
+                    SendCommand(input.Substring(1));
+                }
+                else
+                {
+                    SendMessage(input);
+                }
             }
         }
 
-        private async void SendMessage(string message)
+        private void SendMessage(string message)
         {
-            await socket.EmitAsync("message", message);
+            SendEvent("message", message);
+        }
+
+        private void SendCommand(string command) 
+        {
+            switch (command)
+            {
+                case "exit":
+                    running = false;
+                    break;
+                case "help":
+                    DisplayHelp();
+                    break;
+                default:
+                    SendEvent("command", command);
+                    break;
+            }
+        }
+
+        private async void SendEvent(string eventName, string content) 
+        {
+            await socket.EmitAsync(eventName, content);
         }
 
         private string GetMessage()
@@ -82,9 +125,22 @@ namespace bt_chat_client
 
         private async void Socket_OnConnected(object sender, EventArgs e)
         {
-            Console.WriteLine("connected");
+            Console.WriteLine("Connected to BT Server");
+            Console.WriteLine($"Commands prefix: '{COMMAND_PREFIX}'. Type {COMMAND_PREFIX}help to see the list of available commands.");
             await socket.EmitAsync("name", this.Name);
         }
 
+        private void DisplayHelp() 
+        {
+            Console.WriteLine("Supported commands");
+            DisplayCommandHelp("exit", "Terminates the session and exits the client");
+            DisplayCommandHelp("help", "Displays the available commands");
+            DisplayCommandHelp("users", "Lists the users that are logged in");
+        }
+
+        private void DisplayCommandHelp(string command, string description)
+        {
+            Console.WriteLine($"{COMMAND_PREFIX}{command}\t{description}");
+        }
     }
 }
