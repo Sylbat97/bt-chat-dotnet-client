@@ -10,7 +10,7 @@ namespace bt_chat_client
 
         public override string ToString()
         {
-            return String.Format("{0} [{1}] {2}", Time.ToString("dd/MM/yyyy HH:mm:ss"), Author, Content);
+            return String.Format("{0} [{1}] {2}", Time.ToLocalTime().ToString("dd/MM/yyyy HH:mm:ss"), Author, Content);
         }
     }
 }
